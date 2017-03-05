@@ -82,7 +82,8 @@ function isIE() {
 	document.write('<script src="js/' + url + '"></script>');
 	return false;
 }
-	include('superfish.js');
+  //= superfish
+	// include('superfish.js');
 	jQuery(function () {
 })
 })(jQuery);
