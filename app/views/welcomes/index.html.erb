@@ -9,7 +9,7 @@
       </h2>
       <div class="row offs3">
         <div class="col-md-4 col-sm-12 col-xs-12">
-          <a class="thumb" data-fancybox-group='1' href="images/page-3_img1_original.jpg">
+          <a class="thumb" data-fancybox-group='1' href="<%= image_url "page-3_img1_original.jpg"  %>">
             <!-- <img class="" src="images/page-3_img1.jpg" alt=""> -->
             <%=image_tag "page-3_img1.jpg",alt:"" %>
             <span class='thumb_overlay'></span>
@@ -24,7 +24,7 @@
           </p>
         </div>
         <div class="col-md-4 col-sm-12 col-xs-12">
-          <a class="thumb" data-fancybox-group='1' href="images/page-3_img2_original.jpg">
+          <a class="thumb" data-fancybox-group='1' href="<%= image_url "page-3_img2_original.jpg"  %>">
             <!-- <img class="" src="images/page-3_img2.jpg" alt=""> -->
             <%=image_tag "page-3_img2.jpg",alt:"" %>
 
@@ -41,7 +41,7 @@
           </p>
         </div>
         <div class="col-md-4 col-sm-12 col-xs-12">
-          <a class="thumb" data-fancybox-group='1' href="images/page-3_img3_original.jpg">
+          <a class="thumb" data-fancybox-group='1' href="<%= image_url "page-3_img3_original.jpg" %>">
             <!-- <img class="" src="images/page-3_img3.jpg" alt=""> -->
             <%=image_tag "page-3_img3.jpg",alt:"" %>
 
@@ -62,7 +62,7 @@
     </div>
   </section>
 
-  <section class="well well6 parallax parallax1" data-url="<%=image_url "parallax2.jpg"  %>" data-mobile="
+  <section class="well well6 parallax parallax1" data-url="https://s3-us-west-2.amazonaws.com/nirvana2016/image/parallax2.jpg" data-mobile="
   true" data-speed="0.7">
     <div class="container">
       <div class="wrap text-center">
