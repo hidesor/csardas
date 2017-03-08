@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+_Procfile
+database.yml
+public/system
+config/_puma.rb

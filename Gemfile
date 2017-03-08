@@ -4,7 +4,9 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development
+#gem 'sqlite3', group: :development
+gem 'mysql2',group: :development
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -54,6 +56,7 @@ gem "fog"
 #分頁
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
