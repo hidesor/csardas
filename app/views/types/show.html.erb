@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-6">
+        <h4>
+            <%= @type.name %>
+        </h4>
+        <h5>
+            <%= @type.description %>
+        </h5>
+    </div>
+</div>
+<% @products.each do |product| %>
+
+<div class="col-xs-6 col-md-3 welcome-prod">
+    <%= link_to product_path(product) do %>
+    <% if product.photo.present? %>
+    <%= image_tag(product.photo.image.medium.url, class: "thumbnail") %>
+<% else %>
+    <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+    <% end %>
+    <% end %>
+    <div class="description_fix_h">
+        <p class="product_title"><%= product.title %></p>
+        <p class="product_price">
+            $
+            <%= product.price %></p>
+        <p class="product_dec"><%= truncate(product.description, :length => 40) %></p>
+    </div>
+</div>
+
+<% end %>

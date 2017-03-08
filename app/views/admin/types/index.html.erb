@@ -1,0 +1,41 @@
+<h2>商品類別</h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增類別", new_admin_type_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th width="100">類別圖示</th>
+            <th width="100">商品類別</th>
+            <th>類別說明</th>
+            <th>上架順序</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @types.each do |type| %>
+        <tr>
+            <td>
+                <% if type.photo.present? %>
+                  <%= image_tag(type.photo.image.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                <% end %>
+
+            </td>
+            <td>
+                <%= type.name %>
+            </td>
+            <td>
+                <%= type.description %>
+            </td>
+            <td>
+                <%= type.order %>
+            </td>
+            <td>
+              <%= link_to("Edit", edit_admin_type_path(type)) %>
+            </td>
+        </tr>
+        <% end%>
+    </tbody>
+</table>

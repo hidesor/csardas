@@ -1,0 +1,28 @@
+<h2>優惠好康</h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增優惠好康", new_admin_good_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>優惠好康</th>
+            <th>好康說明</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @goods.each do |good| %>
+        <tr>
+            <td>
+                <%= good.title %>
+            </td>
+            <td>
+                <%= good.description %>
+            </td>
+            <td>
+                <%= link_to("Edit", edit_admin_good_path(good)) %>
+            </td>
+        </tr>
+        <% end%>
+    </tbody>
+</table>

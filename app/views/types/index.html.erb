@@ -1,0 +1,9 @@
+<h4>購買產品</h4>
+
+<div class="row">
+    <!-- 加入類別篩選-->
+    <% @types.each do |type| %>
+    <%= link_to(type.name,type_by_products_path(type))  %>
+    <% end %>
+    <%= link_to("購買產品") %>
+</div>
