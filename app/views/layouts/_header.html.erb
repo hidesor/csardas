@@ -53,11 +53,15 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="index-3.html">PROJECTS</a>
+                  <%= link_to 'SIGNUP' ,new_user_registration_path  %>
                 </li>
 
                 <li>
-                  <a href="index-4.html">CONTACTS</a>
+                  <% if current_user %>
+                    <%= link_to "LOGOUT" , destroy_user_session_path, method: :delete, class: "lighting_options" %>
+                  <% else %>
+                    <%= link_to 'LOGIN' ,admin_products_path  %>
+                  <% end %>
                 </li>
               </ul>
             </div>
